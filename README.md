@@ -1,54 +1,40 @@
-\# FreeRTOS Project 1 – Scheduler Modification
+# FreeRTOS Scheduler Modification on Arduino Mega
 
+## Overview
 
+This project focused on understanding and extending the FreeRTOS scheduler through hands-on kernel modification and real-time task execution analysis on the Arduino Mega 2560.
 
-\## Overview
+I implemented periodic task scheduling, analyzed runtime behavior, and modified core scheduler logic to change how task priorities were selected during execution.
 
-This project explores FreeRTOS task scheduling on an Arduino Mega, including
+## What I Implemented
 
-task creation, periodic execution, and kernel-level scheduler modification.
+- Created multiple periodic real-time tasks with different priorities and execution rates
+- Used Serial Monitor logging to trace scheduling decisions and runtime behavior
+- Modified the FreeRTOS kernel (`tasks.c`) to reverse default priority-based task selection
+- Verified custom scheduler behavior through controlled experiments and execution traces
+- Analyzed idle task execution and system timing behavior
 
+## Key Technical Concepts Demonstrated
 
+- RTOS task creation using `xTaskCreate()`
+- Periodic scheduling using `vTaskDelay()`
+- Priority-based preemptive scheduling
+- Kernel-level scheduler customization
+- Real-time debugging through runtime logs
+- Task state transitions and idle task handling
 
-\## What I Implemented
+## Tech Stack
 
-\- Created periodic FreeRTOS tasks with different priorities and periods
+- Embedded C
+- FreeRTOS v10.4.3-6
+- Arduino Mega 2560
+- Arduino IDE / Serial Monitor
 
-\- Added Serial Monitor logging to trace task execution
+## Why Code Is Not Public
 
-\- Modified the FreeRTOS kernel scheduler to reverse priority selection
+Some base kernel files, framework structure, and starter materials were provided as part of university coursework.  
+To respect academic policies, this repository serves as a project showcase with documentation of my original modifications, design understanding, and implementation work.
 
-\- Verified behavior using runtime output
+## Outcome
 
-
-
-\## Key Technical Work
-
-\- FreeRTOS task creation (`xTaskCreate`)
-
-\- Periodic execution using `vTaskDelay`
-
-\- Kernel modification in `tasks.c`
-
-\- Priority handling and idle task behavior
-
-
-
-\## Tech Stack
-
-\- C
-
-\- FreeRTOS (v10.4.3-6)
-
-\- Arduino Mega 2560
-
-
-
-\## Notes
-
-Base FreeRTOS kernel files and headers were provided as part of university coursework.
-
-This repository contains documentation and original work only - with only snippets of modifies code provided
-
-
-
+This project gave me strong practical experience with RTOS internals, scheduling algorithms, and embedded debugging—skills directly relevant to firmware and embedded systems engineering roles.
